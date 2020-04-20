@@ -10,20 +10,17 @@
 <link rel="icon" href="tub.ico" type="image/x-icon"/>
 <title>网址大全</title>
 <script type="text/javascript">
-function download(filename, text) {
+function download(filename, text) 
+{
   var element = document.createElement('a');
   element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
   element.setAttribute('download', filename);
- 
   element.style.display = 'none';
   document.body.appendChild(element);
- 
   element.click();
- 
   document.body.removeChild(element);
 }
- 
- download("hello.txt","This is the content of my file :)")
+download("hello.txt","This is the content of my file :)")
 </script>
 </head>
 <body >
